@@ -9,7 +9,6 @@ def get_user_input():
     return numbers
 
 def  find_min_max(q):
-    numbers = q
     minval = q[0]
     minval = q[0]
     for i in q :
@@ -21,6 +20,14 @@ def  find_min_max(q):
     print("The maximum value in the array is : " + str(maxval))
     values = [minval,maxval]
     return values
+def find_average(q):
+    sum = 0.0
+    for i in range (0, len(q)):
+        sum +=q[i]
+    average = sum / len(q)
+    print ("The average of all the numbers in the array is " + str(average))
+    return average
 if __name__ == "__main__":
     q = get_user_input()
     find_min_max(q)
+    find_average(q)
